@@ -1,0 +1,615 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+$color-bg-yellow:#fcb800;
+$color-text-black:#000;
+$color-bg-black:#000;
+$color-text-white:#fff;
+
+
+//Header style start
+.header{
+    padding: 15px 4%;
+    background-color:$color-bg-yellow;
+   .row{
+     .Brand{
+          p{
+           
+            a{ 
+                font-size: 30px;
+                text-decoration: none;
+                color: $color-text-white;
+               
+                span{
+                    margin: 0 3px;
+                    font-weight: bold;
+                    padding: 0 3px;
+                    border-radius: 5px;
+                    background-color: $color-bg-black;
+
+                
+                }
+            }
+        }
+    }
+       
+    .header-center{
+        display: flex;
+        form{
+            display:flex;
+            align-items: center;
+            width: 100%;
+            input{
+              border-radius: 5px 0 0 5px;
+              width: 94%;
+              padding: 6px 15px;
+              border: none;
+              height: 40px;
+              
+              &:focus{
+                  outline: none;
+              }
+            }
+            label{
+                border-radius: 0 5px 5px 0;
+                cursor: pointer;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 6px 10px;
+                width: 6%;
+                min-width: 30px;
+                background-color:$color-bg-black;
+                border: none;
+                i{
+                    
+                    color: $color-text-white;
+                      
+                }
+            }
+        }
+    }
+    .header-right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .icons{
+            display: flex;
+            align-items: center;
+            justify-content:flex-end;
+            width: 100%;
+            a{
+                text-decoration: none;
+                i{
+                    position: relative;
+                    margin: 0 15px;
+                    font-size: 33px;
+                    color: $color-text-black ;
+                    span{
+                        position: absolute;
+                        bottom: 0;
+                        right: -8px;
+                        font-size: 13px;
+                        border-radius: 50%;
+                        background-color: $color-bg-black;
+                        color: $color-text-white;
+                        padding: 2px 4px;
+                    }
+                }
+               &:nth-child(3){
+                   display: flex;
+                   align-items: center;
+
+                .Login{
+                    font-size: 12px !important;
+                    color: $color-text-black;
+                    font-weight: bold;
+                }
+               }
+            }
+        }
+    }
+   }
+}
+.sticky{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+//  Header style end
+
+// Navbar style start
+.Navbar{
+    height: 50px;
+    background-color: $color-bg-yellow;
+    border-top: 1px solid #999;
+    .row{
+        .kategoriya{ 
+            height: 49px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 4%;
+            .bars{
+                width: 10%;
+                i{
+                    font-size: 18px;
+                }
+            }
+       
+            ul{
+                width: 90%;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                li{
+                    padding: 4px;
+                    list-style: none;
+                    display: inline-block;
+                    a{
+                        color: $color-text-black;
+                        text-decoration: none;
+                        span{
+                            font-size: 17px;
+                        }
+                        i{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        
+    
+        }
+        // Home menu style start
+        .home-menu{
+            position: fixed;
+            left: 60px;
+            top: 141px;
+            z-index: 998;
+            width: 300px;
+            height: 380px;
+            background-color:rgb(228, 228, 228);
+            padding: 10px;
+            display: none;
+            nav{
+                ul{
+                    li{
+                        margin: 15px 0 ;
+                        list-style: none;
+                        &:hover{
+                            transform: scale(0.98);
+                                transition: scale 0.6s ease;
+                        }
+                        a{
+                            text-decoration: none;
+                            color: $color-text-black;
+                            &:hover{
+                                color:$color-bg-yellow !important;
+                            }
+                        }
+                    }
+                }
+            }
+            &::before{
+                content: ' ';
+                position: absolute;
+                border-style: solid ;
+                z-index: 999;
+                border-width: 0  15px 15px  15px;
+                left: 52%;
+                top: -14px;
+                border-color: transparent transparent rgb(228, 228, 228) transparent;
+            }
+        }
+        // Home menu style end
+        // Shop menu style start
+        .Shop-menu{
+            position: fixed;
+            left: 10%;
+            top: 141px;
+            z-index: 998;
+            width: 300px;
+            height: 380px;
+            background-color:rgb(228, 228, 228);
+            padding: 10px;
+            display: none;
+            nav{
+                ul{
+                    li{
+                        margin: 15px 0 ;
+                        list-style: none;
+                        &:hover{
+                            transform: scale(0.98);
+                                transition: scale 0.6s ease;
+                        }
+                        a{
+                            text-decoration: none;
+                            color: $color-text-black;
+                            &:hover{
+                                color:$color-bg-yellow !important;
+                            }
+                        }
+                    }
+                }
+            }
+            &::before{
+                content: ' ';
+                position: absolute;
+                border-style: solid ;
+                z-index: 999;
+                border-width: 0  15px 15px  15px;
+                left: 52%;
+                top: -14px;
+                border-color: transparent transparent rgb(228, 228, 228) transparent;
+            }
+        }
+        // Shop menu style end
+        // Setting menu style start
+        .setting-menu{
+            position: fixed;
+            left: 26%;
+            top: 141px;
+            z-index: 998;
+            width: 300px;
+            height: 380px;
+            background-color:rgb(228, 228, 228);
+            padding: 10px;
+            display: none;
+            nav{
+                ul{
+                    li{
+                        margin: 15px 0 ;
+                        list-style: none;
+                        &:hover{
+                            transform: scale(0.98);
+                                transition: scale 0.6s ease;
+                        }
+                        a{
+                            text-decoration: none;
+                            color: $color-text-black;
+                            &:hover{
+                                color:$color-bg-yellow !important;
+                            }
+                        }
+                    }
+                }
+            }
+            &::before{
+                content: ' ';
+                position: absolute;
+                border-style: solid ;
+                z-index: 999;
+                border-width: 0  15px 15px  15px;
+                left: 15%;
+                top: -14px;
+                border-color: transparent transparent rgb(228, 228, 228) transparent;
+            }
+        }
+        // Setting menu style end
+        // About we menu style start
+        .about-we-menu{
+            position: fixed;
+            left: 34%;
+            top: 141px;
+            z-index: 998;
+            width: 300px;
+            height: 380px;
+            background-color:rgb(228, 228, 228);
+            padding: 10px;
+            display: none;
+            nav{
+                ul{
+                    li{
+                        margin: 15px 0 ;
+                        list-style: none;
+                        &:hover{
+                            transform: scale(0.98);
+                                transition: scale 0.6s ease;
+                        }
+                        a{
+                            text-decoration: none;
+                            color: $color-text-black;
+                            &:hover{
+                                color:$color-bg-yellow !important;
+                            }
+                        }
+                    }
+                }
+            }
+            &::before{
+                content: ' ';
+                position: absolute;
+                border-style: solid ;
+                z-index: 999;
+                border-width: 0  15px 15px  15px;
+                left: 15%;
+                top: -14px;
+                border-color: transparent transparent rgb(228, 228, 228) transparent;
+            }
+        }
+        // about we menu style end
+        .Navbar-right{
+            display: none;
+            form{
+                display: none;
+            }
+        }
+    }
+}
+// Navbar style  end 
+
+
+// Hero section start
+.hero{
+    .container-fluid{
+        .row{
+            // corusel style start
+            .hero-left{
+                padding: 15px;
+                height: 60vh;
+                .carousel{
+                    .carousel-inner{
+                        .carousel-item{
+                            
+                        }
+                    }
+                    button{
+                           
+                    }
+                }
+            }
+
+            .hero-right{
+                height: 60vh;
+                .row{
+                    .col-12{
+                        padding: 15px ;
+                        height: 30vh;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+              
+            }
+        }
+    }
+}
+// Hero section end
+
+
+// footer style
+.footer{
+    margin: 20px auto;
+    .container-fluid{
+        .row{
+          .footer-box{
+              h4{
+                  color: $color-bg-yellow;
+              }
+              .icons{
+                  .fa{
+                     color: $color-text-blacks;
+                     &:hover{
+                         color: $color-bg-yellow;
+                         cursor: pointer;
+                        } 
+                    }
+                }
+             ul{
+                 list-style: none;
+                 li{
+                     a{
+                         text-decoration: none;
+                         color: #000;
+                     }
+                     &:hover{
+                         transform: scale(0.95);
+                         transition: 0.5s linear;
+                         a{
+                             color: $color-bg-yellow;
+                         }
+                     }
+                 }
+             }
+          }  
+        }
+    }
+}
+// footer style end
+
+
+// Web sayite Responsivligi start
+@media (max-width: 1000px) {
+    // header responsivligi start
+    .header{
+        position: relative;
+        .row{
+             .header-center{
+                 display: none;
+             }
+
+            .header-right{
+                position: absolute;
+                right: 4%;
+                top: 16%;
+            }
+        }
+    }
+    // header responsivligi end
+    .Navbar{
+        height: 60px;
+        padding: 0 4%;
+        .row{
+            .Navbar-menu{
+                height: 60px;
+                display: flex;
+                align-items: center;
+            }
+            .Navbar-right{
+                display: flex;
+                align-items: center;
+                justify-self:center;
+                height: 60px;
+                padding: 0;
+                .content{
+                    display: none;
+                }
+                form{
+                    display: block;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    input{
+                      border-radius: 5px 0 0 5px;
+                      width: 94%;
+                      padding: 6px 15px;
+                      border: none;
+                      height: 40px;
+                      
+                      &:focus{
+                          outline: none;
+                      }
+                    }
+                    label{
+                        border-radius: 0 5px 5px 0;
+                        cursor: pointer;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 6px 10px;
+                        width: 6%;
+                        min-width: 30px;
+                        background-color:$color-bg-black;
+                        border: none;
+                        i{
+                            
+                            color: $color-text-white;
+                              
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    body{
+        // Header Responsive style start
+           .header{
+               height:60px;
+              .row{
+                 .Brand{
+                    p{
+                     
+                       a{ 
+                          font-size: 21px;
+                          text-decoration: none;
+                          color: $color-text-white;
+                         
+                            span{
+                              margin: 0;
+                              font-weight: bold;
+                              padding: 0 3px;
+                              border-radius: 5px;
+                              background-color: $color-bg-black;
+          
+                          
+                            }
+                        }
+                    }
+                  }
+          
+                  .header-right{
+                      margin-top: 5px;
+                      .icons{
+                          a{
+                              i{
+                                  font-size: 25px;
+                                  span{
+                                      &:nth-child(3){
+                                          font-size: 12px;
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              } 
+           }
+        // Reposive Navbar style start
+        .Navbar{
+            .row{
+                .Navbar-menu{
+                    width: 0;
+                    padding: 0;
+                    .bars{
+                        display: none;
+                    }
+                    ul{
+                        width: 100%;
+                        height:50px;
+                        background-color: black;
+                        position: fixed;
+                        bottom: 0;
+                        right: 0;
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0;
+                        li{
+                            width: 25%;
+                            margin: 0;
+                            padding: 10px;
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            a{
+                                span{
+                                display: none;
+                                }
+                                i{
+                                    display:block;
+                                    font-size: 18px;
+                                    color: white;
+                                    background-color: red;
+                                    width: 38px;
+                                    height:38px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border-radius: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .home-menu,
+                .Shop-menu,
+                .setting-menu,
+                .about-we-menu{
+                    display: none;
+                }
+
+                .Navbar-right{
+                    padding: 0 4%;
+                }
+            }
+    
+        }
+    }
+} 
+// Web sayite Responsivligi end
